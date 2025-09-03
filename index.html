@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Banner Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="noise"></div>
+    
+    <!-- GitHub-style light effects -->
+    <div class="light-effect light-effect-1"></div>
+    <div class="light-effect light-effect-2"></div>
+    <div class="light-effect light-effect-3"></div>
+    
+    <header>
+        <div class="logo">
+            <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" class="octicon octicon-mark-github v-align-middle">
+                <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+            </svg>
+            <span>Profile Banner Generator <sup><span style="color: #9e9e9e;">Beta</span></sup></span>
+        </div>
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Samples</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <div class="glass-card">
+                <h1>GitHub Profile Banner Generator</h1>
+                <p>Create a unique animated GitHub profile banner with terminal-style loading, glitch effects, and metal textures.</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="glass-card editor">
+                <form id="profile-form">
+                    <div class="form-group">
+                        <label for="input-username">Username</label>
+                        <input type="text" id="input-username" placeholder="Enter username" value="Saviru">
+                    </div>
+                    <div class="form-group">
+                        <label for="input-fullname">Full Name</label>
+                        <input type="text" id="input-fullname" placeholder="Enter full name" value="Saviru Kashmira Atapattu">
+                    </div>
+                    <div class="form-group">
+                        <label for="input-description">Description</label>
+                        <input type="text" id="input-description" placeholder="Enter description" value="Developer | Tech Explorer | Designer">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="animate-profile">
+                            <input type="checkbox" id="animate-profile">
+                            Repeat Animation
+                        </label>
+                    </div>
+                    <button type="button" id="generate-button" class="btn-primary">
+                        <i class="fa-regular fa-image fa-beat"></i>
+                        Generate Preview
+                    </button>
+                    <button type="button" class="btn-secondary" id="reset-form"><i class="fa-solid fa-square-minus" style="color: #ff0000;"></i> Reset</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="result-preview hidden" id="result-container">
+            <div class="glass-card result">
+                <h2>Generated Profile</h2>
+                <div class="profile-result" id="result-preview">
+                    <!-- Preview will be inserted here -->
+                </div>
+                <div class="button-group">
+                    <button id="download-svg" class="btn-download">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download SVG
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="glass-card feature">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 20h9"></path>
+                        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                    </svg>
+                </div>
+                <h3>Terminal Animation</h3>
+                <p>Animated terminal with loading progress and command-line interface</p>
+                <div class="reflect-light"></div>
+            </div>
+            <div class="glass-card feature">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                </div>
+                <h3>Download SVG</h3>
+                <p>Download your customized profile as SVG</p>
+                <div class="reflect-light"></div>
+            </div>
+            <div class="glass-card feature">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3a6.364 6.364 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                    </svg>
+                </div>
+                <h3>Glitch Effects</h3>
+                <p>Modern glitch effects with animated welcome text and visual distortions</p>
+                <div class="reflect-light"></div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 GitHub Profile Editor. Created by Saviru. Last updated: 2025-09-03</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact</a>
+        </div>
+    </footer>
+
+    <!-- Hidden SVG for generating the profile -->
+    <div style="display: none;">
+
+        <img src="profileBanner.svg" id="profile-svg">
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

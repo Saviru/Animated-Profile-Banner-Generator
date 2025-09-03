@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple SVG Text Changer</title>
+</head>
+<body>
+    <h1>Change SVG Text</h1>
+    
+    <input type="text" id="nameInput" placeholder="Enter new name">
+    <button onclick="updateName()">Update Name</button>
+    
+    <div id="svgContainer"></div>
+
+    <script>
+        // Load the SVG when page loads
+        window.onload = function() {
+            fetch('test.svg')
+                .then(response => response.text())
+                .then(svgText => {
+                    document.getElementById('svgContainer').innerHTML = svgText;
+                });
+        };
+
+        // Function to update the name in SVG
+        function updateName() {
+            const newName = document.getElementById('nameInput').value;
+            const nameElement = document.getElementById('name');
+            if (nameElement && newName) {
+                nameElement.textContent = newName;
+            }
+        }
+    </script>
+</body>
+</html>

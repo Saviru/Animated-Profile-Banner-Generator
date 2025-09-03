@@ -1,0 +1,324 @@
+<svg width="800" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions for gradients and animations -->
+  <defs>
+    <!-- Radial gradient for red reflection - ENHANCED: larger size and more prominent -->
+    <radialGradient id="redGlow" cx="0.1" cy="0.1" r="1.8" fx="0.1" fy="0.1">
+      <stop offset="0%" stop-color="#520806" stop-opacity="0.9">
+        <animate attributeName="stop-opacity" values="0.9;0.95;0.9" dur="7s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#520806" stop-opacity="0.6" />
+      <stop offset="80%" stop-color="#520806" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+      
+      <!-- Comprehensive rotation animation all around the background -->
+      <animate 
+        attributeName="cx" 
+        values="0.1;0.3;0.5;0.7;0.9;0.7;0.5;0.3;0.1" 
+        dur="24s" 
+        repeatCount="indefinite" />
+      <animate 
+        attributeName="cy" 
+        values="0.1;0.3;0.5;0.7;0.9;0.7;0.5;0.3;0.1" 
+        dur="24s" 
+        repeatCount="indefinite" />
+      <animate 
+        attributeName="r" 
+        values="1.8;1.8;1.8" 
+        dur="24s" 
+        repeatCount="indefinite" />
+    </radialGradient>
+    
+    <!-- Radial gradient for blue reflection - kept smaller than red -->
+    <radialGradient id="blueGlow" cx="0.9" cy="0.9" r="1.5" fx="0.9" fy="0.9">
+      <stop offset="0%" stop-color="#021D4A" stop-opacity="0.8">
+        <animate attributeName="stop-opacity" values="0.8;0.8;0.8" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="60%" stop-color="#021D4A" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+      
+      <!-- Comprehensive rotation animation in opposite direction -->
+      <animate 
+        attributeName="cx" 
+        values="0.9;0.7;0.5;0.3;0.1;0.3;0.5;0.7;0.9" 
+        dur="26s" 
+        repeatCount="indefinite" />
+      <animate 
+        attributeName="cy" 
+        values="0.9;0.7;0.5;0.3;0.1;0.3;0.5;0.7;0.9" 
+        dur="26s" 
+        repeatCount="indefinite" />
+      <animate 
+        attributeName="r" 
+        values="1.5;1.5;1.5" 
+        dur="26s" 
+        repeatCount="indefinite" />
+    </radialGradient>
+    
+    <!-- Metal texture gradient for text -->
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="10%" stop-color="#e0e0e0" stop-opacity="0.8" />
+      <stop offset="20%" stop-color="#d0d0d0" stop-opacity="0.9" />
+      <stop offset="30%" stop-color="#c0c0c0" stop-opacity="1" />
+      <stop offset="70%" stop-color="#a0a0a0" stop-opacity="0.9" />
+      <stop offset="85%" stop-color="#909090" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#808080" stop-opacity="0.7" />
+      
+      <!-- Animation for the metal gradient -->
+      <animate attributeName="y1" values="0%;15%;0%;10%;0%" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="100%;85%;100%;90%;100%" dur="6s" repeatCount="indefinite" />
+    </linearGradient>
+    
+    <!-- Metal shine effect -->
+    <linearGradient id="shineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="48%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.6" />
+      <stop offset="52%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+      
+      <!-- Animation for the shine effect -->
+      <animate attributeName="x1" values="-100%;0%;100%" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="0%;100%;200%" dur="3s" repeatCount="indefinite" />
+    </linearGradient>
+    
+    <!-- Subtle background texture pattern -->
+    <pattern id="bgPattern" width="100" height="100" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="100" height="100" fill="#000000"/>
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#101010" stroke-width="1"/>
+      <line x1="0" y1="20" x2="100" y2="20" stroke="#0a0a0a" stroke-width="1"/>
+      <line x1="0" y1="40" x2="100" y2="40" stroke="#101010" stroke-width="1"/>
+      <line x1="0" y1="60" x2="100" y2="60" stroke="#0a0a0a" stroke-width="1"/>
+      <line x1="0" y1="80" x2="100" y2="80" stroke="#101010" stroke-width="1"/>
+    </pattern>
+  </defs>
+  
+  <!-- Main black background with subtle texture -->
+  <rect width="100%" height="100%" rx="10" ry="10" fill="url(#bgPattern)" />
+  
+  <!-- Base black background -->
+  <rect width="100%" height="100%" rx="10" ry="10" fill="#000000" opacity="0.7" />
+  
+  <!-- Animated reflections - red is now more prominent -->
+  <rect width="100%" height="100%" rx="10" ry="10" fill="url(#redGlow)" />
+  <rect width="100%" height="100%" rx="10" ry="10" fill="url(#blueGlow)" />
+  
+  
+  <!-- TERMINAL PART - Unmodified original code -->
+  <g id="terminal-part">
+    <!-- Command prompt line - repositioned higher -->
+    <text x="20" y="40" font-family="monospace" font-size="14" fill="#50fa7b">saviru@github:~$</text>
+    <text x="150" y="40" font-family="monospace" font-size="14" fill="#f8f8f2">GET profile Saviru --verbose</text>
+    
+    <!-- Loading message - repositioned higher -->
+    <text x="20" y="70" font-family="monospace" font-size="16" fill="#bd93f9" font-weight="bold">Loading Saviru's profile...</text>
+    
+    <!-- Progress bar background - repositioned higher -->
+    <rect x="20" y="90" width="760" height="20" rx="3" ry="3" fill="#44475a" />
+    
+    <!-- Progress bar with animation - changed to run once only -->
+    <rect x="20" y="90" width="0" height="20" rx="3" ry="3" fill="#50fa7b">
+      <animate 
+        attributeName="width" 
+        values="0;760" 
+        dur="3s" 
+        fill="freeze" />
+    </rect>
+    
+    <!-- Random "code" lines appearing with delay - repositioned -->
+    <text x="20" y="130" font-family="monospace" font-size="12" fill="#6272a4" opacity="0">
+      <tspan x="20" dy="0">Initializing profile data...</tspan>
+      <animate 
+        attributeName="opacity" 
+        values="0;1" 
+        begin="0.5s" 
+        dur="0.3s" 
+        fill="freeze" />
+    </text>
+    
+    <text x="20" y="150" font-family="monospace" font-size="12" fill="#6272a4" opacity="0">
+      <tspan x="20" dy="0">Fetching repositories and contributions...</tspan>
+      <animate 
+        attributeName="opacity" 
+        values="0;1" 
+        begin="1.2s" 
+        dur="0.3s" 
+        fill="freeze" />
+    </text>
+    
+    <text x="20" y="170" font-family="monospace" font-size="12" fill="#6272a4" opacity="0">
+      <tspan x="20" dy="0">Preparing GitHub profile display...</tspan>
+      <animate 
+        attributeName="opacity" 
+        values="0;1" 
+        begin="1.9s" 
+        dur="0.3s" 
+        fill="freeze" />
+    </text>
+    
+    <!-- Background "matrix" effect dots that randomly appear and disappear 
+    <g fill="#6272a4" opacity="0.2">
+      <circle cx="750" cy="50" r="1">
+        <animate attributeName="opacity" values="0.1;0.3;0.1" dur="2s" begin="0.1s" repeatCount="1" />
+      </circle>
+      <circle cx="720" cy="70" r="1">
+        <animate attributeName="opacity" values="0.1;0.4;0.1" dur="3s" begin="0.5s" repeatCount="1" />
+      </circle>
+      <circle cx="760" cy="90" r="1">
+        <animate attributeName="opacity" values="0.1;0.3;0.1" dur="2.5s" begin="0.7s" repeatCount="1" />
+      </circle>
+      <circle cx="710" cy="110" r="1">
+        <animate attributeName="opacity" values="0.1;0.5;0.1" dur="1.5s" begin="0.2s" repeatCount="1" />
+      </circle>
+      <circle cx="770" cy="130" r="1">
+        <animate attributeName="opacity" values="0.1;0.4;0.1" dur="2.2s" begin="0.9s" repeatCount="1" />
+      </circle>
+      <circle cx="730" cy="150" r="1">
+        <animate attributeName="opacity" values="0.1;0.3;0.1" dur="3.2s" begin="1.1s" repeatCount="1" />
+      </circle>
+      <circle cx="780" cy="170" r="1">
+        <animate attributeName="opacity" values="0.1;0.4;0.1" dur="2.7s" begin="0.3s" repeatCount="1" />
+      </circle>
+    </g>-->
+    
+    <!-- Percentage counter - repositioned -->
+    <text x="740" y="104" font-family="monospace" font-size="12" fill="#f8f8f2" text-anchor="end">
+      <animate 
+        attributeName="textContent" 
+        values="0%;10%;20%;30%;40%;50%;60%;70%;80%;90%;100%" 
+        dur="3s"
+        fill="freeze" />
+    </text>
+
+    <!-- Fade out the terminal part after loading completes -->
+    <animate 
+      attributeName="opacity" 
+      values="1;0" 
+      begin="3s" 
+      dur="0.3s" 
+      fill="freeze" />
+  </g>
+  
+  <!-- WELCOME PART - Added welcome screen -->
+  <g id="welcome-part" opacity="0">
+    <!-- Glitch effect layers (behind the white text) -->
+    
+    <!-- Red glitch layer -->
+    <text x="400" y="100" font-family="Impact, Haettenschweiler, Arial Narrow Bold, sans-serif" font-size="38" text-anchor="middle" fill="#ff5555" opacity="0.5">
+      Welcome to Saviru's Github Profile
+      <animate attributeName="x" values="400;402;397;403;400" dur="0.5s" begin="3.5s" repeatCount="indefinite" />
+      <animate attributeName="y" values="100;98;102;97;100" dur="0.35s" begin="3.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.5;0.0;0.6;0.0;0.5" dur="0.25s" begin="3.5s" repeatCount="indefinite" />
+    </text>
+    
+    <!-- Blue glitch layer -->
+    <text x="400" y="100" font-family="Impact, Haettenschweiler, Arial Narrow Bold, sans-serif" font-size="38" text-anchor="middle" fill="#8be9fd" opacity="0.5">
+      Welcome to Saviru's Github Profile
+      <animate attributeName="x" values="400;397;402;395;400" dur="0.45s" begin="3.5s" repeatCount="indefinite" />
+      <animate attributeName="y" values="100;102;97;101;100" dur="0.4s" begin="3.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.5;0.0;0.7;0.0;0.5" dur="0.3s" begin="3.5s" repeatCount="indefinite" />
+    </text>
+    
+    <!-- Green glitch layer -->
+    <text x="400" y="100" font-family="Impact, Haettenschweiler, Arial Narrow Bold, sans-serif" font-size="38" text-anchor="middle" fill="#50fa7b" opacity="0.4">
+      Welcome to Saviru's Github Profile
+      <animate attributeName="x" values="400;399;403;398;400" dur="0.55s" begin="3.5s" repeatCount="indefinite" />
+      <animate attributeName="y" values="100;101;99;102;100" dur="0.5s" begin="3.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.4;0.0;0.5;0.0;0.4" dur="0.35s" begin="3.5s" repeatCount="indefinite" />
+    </text>
+    
+    <!-- Glitch lines that occasionally appear -->
+    <rect x="200" y="80" width="400" height="2" fill="#ff79c6" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="0.1s" begin="4s;4.8s;6.3s" repeatCount="1" />
+      <animate attributeName="y" values="80;85;120;80" dur="0.1s" begin="4s;4.8s;6.3s" repeatCount="1" />
+    </rect>
+    
+    <rect x="250" y="110" width="300" height="3" fill="#8be9fd" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0" dur="0.15s" begin="4.2s;5.1s;5.8s" repeatCount="1" />
+      <animate attributeName="y" values="110;90;115;110" dur="0.15s" begin="4.2s;5.1s;5.8s" repeatCount="1" />
+    </rect>
+    
+    <!-- Main white text on top -->
+    <text x="400" y="100" font-family="Impact, Haettenschweiler, Arial Narrow Bold, sans-serif" font-size="38" text-anchor="middle" fill="#ffffff">
+      Welcome to Saviru's Github Profile
+      <!-- Subtle animation for white text -->
+      <animate attributeName="x" values="400;399;400;401;400" dur="0.8s" begin="3.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0.95;1;0.98;1" dur="1.2s" begin="3.5s" repeatCount="indefinite" />
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="400" y="140" font-family="monospace" font-size="18" text-anchor="middle" fill="#bd93f9" opacity="0">
+      Explore my projects and contributions
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="4s" fill="freeze" />
+      <animate attributeName="y" values="145;140" dur="0.5s" begin="4s" fill="freeze" />
+      <animate attributeName="x" values="400;401;399;400" dur="2s" begin="4.5s" repeatCount="indefinite" />
+    </text>
+    
+    <!-- Fade in the welcome part after terminal completes -->
+    <animate 
+      attributeName="opacity" 
+      values="0;1" 
+      begin="3.3s" 
+      dur="0.3s" 
+      fill="freeze" />
+    
+    <!-- Fade out the welcome part after 3 seconds -->
+    <animate 
+      attributeName="opacity" 
+      values="1;0" 
+      begin="6.5s" 
+      dur="0.5s" 
+      fill="freeze" />
+  </g>
+  
+  <!-- PROFILE PART - With metal texture instead of animation -->
+  <g id="profile-part" opacity="0">
+    <!-- Simple divider line with improved animation -->
+    <rect x="250" y="100" width="0" height="2" fill="#bd93f9" opacity="0.7">
+      <animate attributeName="width" values="0;300" dur="1.2s" begin="7.4s" fill="freeze" keySplines="0.42, 0, 0.58, 1" calcMode="spline" />
+    </rect>
+    
+    <!-- Metal textured name -->
+    <text x="400" y="85" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="middle" fill="url(#metalGradient)" opacity="0" filter="url(#blur)">
+      Saviru Kashmira Atapattu
+      <animate attributeName="opacity" values="0;1" dur="1.2s" begin="7.2s" fill="freeze" keySplines="0.25, 0.1, 0.25, 1" calcMode="spline" />
+      <animate attributeName="y" values="95;85" dur="1.2s" begin="7.2s" fill="freeze" keySplines="0.34, 1.56, 0.64, 1" calcMode="spline" />
+    </text>
+    
+    <!-- Shine effect overlay for name -->
+    <text x="400" y="85" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="middle" fill="url(#shineGradient)" opacity="0">
+      Saviru Kashmira Atapattu
+      <animate attributeName="opacity" values="0;1" dur="1.2s" begin="7.2s" fill="freeze" />
+    </text>
+    
+    <!-- Tagline with blue color -->
+    <text x="400" y="130" font-family="Helvetica, Arial, sans-serif" font-size="18" text-anchor="middle" fill="#8be9fd" opacity="0">
+      Developer | Tech Explorer | Designer
+      <animate attributeName="opacity" values="0;1" dur="1.2s" begin="7.6s" fill="freeze" keySplines="0.25, 0.1, 0.25, 1" calcMode="spline" />
+      <animate attributeName="y" values="140;130" dur="1.2s" begin="7.6s" fill="freeze" keySplines="0.34, 1.56, 0.64, 1" calcMode="spline" />
+    </text>
+    
+    <!-- Add subtle embossing effect with filter -->
+    <filter id="blur">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="0.4" result="blur"/>
+      <feOffset in="blur" dx="0" dy="0.5" result="offsetBlur"/>
+      <feSpecularLighting in="blur" surfaceScale="5" specularConstant=".75" 
+                          specularExponent="20" lighting-color="#bbbbbb" result="specOut">
+        <fePointLight x="400" y="50" z="90"/>
+      </feSpecularLighting>
+      <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
+      <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" 
+                   k1="0" k2="1" k3="1" k4="0" result="litPaint"/>
+    </filter>
+    
+    <!-- Improved fade in for the profile part -->
+    <animate 
+      attributeName="opacity" 
+      values="0;1" 
+      begin="7s" 
+      dur="1s" 
+      fill="freeze"
+      keySplines="0.25, 0.1, 0.25, 1"
+      calcMode="spline" />
+  </g>
+</svg>
