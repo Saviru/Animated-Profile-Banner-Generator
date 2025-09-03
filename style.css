@@ -225,7 +225,7 @@ main {
 }
 
 .hero .glass-card {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     background-color: rgba(22, 27, 34, 0.5);
     position: relative;
@@ -300,7 +300,7 @@ main {
 }
 
 .editor {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 
