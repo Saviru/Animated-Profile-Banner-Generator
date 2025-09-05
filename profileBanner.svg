@@ -107,8 +107,7 @@
   <!-- TERMINAL PART - Unmodified original code -->
   <g id="terminal-part">
     <!-- Command prompt line - repositioned higher -->
-    <text x="20" y="40" font-family="monospace" font-size="14" fill="#50fa7b">saviru@github:~$</text>
-    <text x="150" y="40" font-family="monospace" font-size="14" fill="#f8f8f2">GET profile Saviru --verbose</text>
+    <text x="20" y="40" font-family="monospace" font-size="14" fill="#50fa7b">saviru@github:~$ <tspan font-family="monospace" font-size="14" fill="#f8f8f2">GET profile Saviru --verbose</tspan></text>
     
     <!-- Loading message - repositioned higher -->
     <text x="20" y="70" font-family="monospace" font-size="16" fill="#bd93f9" font-weight="bold">Loading Saviru's profile...</text>
