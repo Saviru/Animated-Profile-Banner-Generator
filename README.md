@@ -54,7 +54,7 @@ Easy to use, just enter your GitHub username, full name and a description, and d
 - Some old browsers may not render SVG animations correctly.
 - There is only one banner style available currently.
 - Only supports dark mode.
-- You need to manually set width as 100% in markdown using `width=100%`.
+- You need to manually set width as 100% in markdown using `width=100%` using an ```img``` tag.
 
 *These issues will be addressed in future updates.
 
