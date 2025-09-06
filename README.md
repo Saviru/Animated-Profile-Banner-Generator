@@ -10,7 +10,7 @@
 
 Create a unique animated GitHub profile banner with terminal-style loading, glitch effects, and metal textures.
 
-Go to [GitBanner Website](https://saviru.github.io/Animated-Profile-Banner-Generator/) to generate your own banner! 
+Go to [GitBanner Website](https://gitbanner.qzz.io) to generate your own banner! 
 
 Easy to use, just enter your GitHub username, full name and a description, and download the SVG file.
 
