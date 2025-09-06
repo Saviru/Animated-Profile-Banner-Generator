@@ -80,6 +80,10 @@ document.addEventListener('DOMContentLoaded', function() {
     descriptionInput.value = defaults.description;
     animateCheckbox.checked = defaults.animate;
     
+    // Variable to track current SVG content and blob URL
+    let currentSvgContent = null;
+    let currentBlobUrl = null;
+    
     // Generate button click handler
     generateButton.addEventListener('click', function() {
         // Show loading state
@@ -105,18 +109,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Replace the actual text content in the SVG
                 // Replace the username in the command prompt
-                modifiedSvg = modifiedSvg.replace(/saviru@github/g, username.toLowerCase() + '@github');
-                modifiedSvg = modifiedSvg.replace(/GET profile Saviru --verbose/g, `GET profile ${username} --verbose`);
-                modifiedSvg = modifiedSvg.replace(/Loading Saviru's profile\.\.\./g, `Loading ${username}'s profile...`);
+                //modifiedSvg = modifiedSvg.replace(/saviru@github/g, username.toLowerCase() + '@github');
+                //modifiedSvg = modifiedSvg.replace(/GET profile Saviru --verbose/g, `GET profile ${username} --verbose`);
+                //modifiedSvg = modifiedSvg.replace(/Loading Saviru's profile\.\.\./g, `Loading ${username}'s profile...`);
+                modifiedSvg = modifiedSvg.replace(/{UsernameCMD}/g, username.toLowerCase());
+                modifiedSvg = modifiedSvg.replace(/{Username}/g, username);
                 
-                // Replace the welcome message
-                modifiedSvg = modifiedSvg.replace(/Welcome to Saviru's Github Profile/g, `Welcome to ${username}'s Github Profile`);
                 
                 // Replace the full name (appears twice in the SVG)
-                modifiedSvg = modifiedSvg.replace(/Saviru Kashmira Atapattu/g, fullname);
+                modifiedSvg = modifiedSvg.replace(/{Fullname}/g, fullname);
                 
                 // Replace the description/tagline
-                modifiedSvg = modifiedSvg.replace(/Developer \| Tech Explorer \| Designer/g, description);
+                modifiedSvg = modifiedSvg.replace(/{Tagline}/g, description);
+                
+                // Store the modified SVG content
+                currentSvgContent = modifiedSvg;
                 
                 // Display the result
                 resultPreview.innerHTML = modifiedSvg;
@@ -140,6 +147,44 @@ document.addEventListener('DOMContentLoaded', function() {
                 generateButton.innerHTML = '<i class="fa-regular fa-image fa-beat"></i> Generate Preview';
                 generateButton.disabled = false;
             });
+    });
+    
+    // Download button click handler
+    downloadButton.addEventListener('click', function() {
+        if (!currentSvgContent) {
+            showNotification('Please generate a profile banner first!', 'error');
+            return;
+        }
+        
+        try {
+            // Clean up previous blob URL
+            if (currentBlobUrl) {
+                URL.revokeObjectURL(currentBlobUrl);
+            }
+            
+            // Create blob from SVG content
+            const blob = new Blob([currentSvgContent], { type: 'image/svg+xml' });
+            currentBlobUrl = URL.createObjectURL(blob);
+            
+            // Get username for filename
+            const username = usernameInput.value || defaults.username;
+            const filename = `${username}-profile-banner.svg`;
+            
+            // Create download link and trigger download
+            const downloadLink = document.createElement('a');
+            downloadLink.href = currentBlobUrl;
+            downloadLink.download = filename;
+            downloadLink.style.display = 'none';
+            
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+            
+            showNotification(`Downloaded ${filename} successfully!`, 'success');
+        } catch (error) {
+            console.error('Download error:', error);
+            showNotification('Error downloading file: ' + error.message, 'error');
+        }
     });
     
     // Clean up blob URLs when page unloads
