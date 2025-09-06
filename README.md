@@ -63,8 +63,10 @@ Easy to use, just enter your GitHub username, full name and a description, and d
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
+<br>
 
-Developed and maintained by [@Saviru](https://github.com/Saviru)
+
+**Developed and maintained by [@Saviru](https://github.com/Saviru)**
 <br>
 <hr>
 <p align="center">Made with ❤️ for the GitHub community </p> 
