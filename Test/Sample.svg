@@ -107,10 +107,10 @@
   <!-- TERMINAL PART - Unmodified original code -->
   <g id="terminal-part">
     <!-- Command prompt line - repositioned higher -->
-    <text x="20" y="40" font-family="monospace" font-size="14" fill="#50fa7b">{UsernameCMD}@github:~$ <tspan font-family="monospace" font-size="14" fill="#f8f8f2">GET profile {Username} --verbose</tspan></text>
+    <text x="20" y="40" font-family="monospace" font-size="14" fill="#50fa7b">saviru@github:~$ <tspan font-family="monospace" font-size="14" fill="#f8f8f2">GET profile Saviru --verbose</tspan></text>
     
     <!-- Loading message - repositioned higher -->
-    <text x="20" y="70" font-family="monospace" font-size="16" fill="#bd93f9" font-weight="bold">Loading {Username}'s profile...</text>
+    <text x="20" y="70" font-family="monospace" font-size="16" fill="#bd93f9" font-weight="bold">Loading Saviru's profile...</text>
     
     <!-- Progress bar background - repositioned higher -->
     <rect x="20" y="90" width="760" height="20" rx="3" ry="3" fill="#44475a" />
@@ -204,7 +204,7 @@
     
     <!-- Red glitch layer -->
     <text x="400" y="100" font-family="Impact, Haettenschweiler, Arial Narrow Bold, sans-serif" font-size="38" text-anchor="middle" fill="#ff5555" opacity="0.5">
-      Welcome to {Username}'s Github Profile
+      Welcome to Saviru's Github Profile
       <animate attributeName="x" values="400;402;397;403;400" dur="0.5s" begin="3.5s" repeatCount="indefinite" />
       <animate attributeName="y" values="100;98;102;97;100" dur="0.35s" begin="3.5s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="0.5;0.0;0.6;0.0;0.5" dur="0.25s" begin="3.5s" repeatCount="indefinite" />
@@ -212,7 +212,7 @@
     
     <!-- Blue glitch layer -->
     <text x="400" y="100" font-family="Impact, Haettenschweiler, Arial Narrow Bold, sans-serif" font-size="38" text-anchor="middle" fill="#8be9fd" opacity="0.5">
-      Welcome to {Username}'s Github Profile
+      Welcome to Saviru's Github Profile
       <animate attributeName="x" values="400;397;402;395;400" dur="0.45s" begin="3.5s" repeatCount="indefinite" />
       <animate attributeName="y" values="100;102;97;101;100" dur="0.4s" begin="3.5s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="0.5;0.0;0.7;0.0;0.5" dur="0.3s" begin="3.5s" repeatCount="indefinite" />
@@ -220,7 +220,7 @@
     
     <!-- Green glitch layer -->
     <text x="400" y="100" font-family="Impact, Haettenschweiler, Arial Narrow Bold, sans-serif" font-size="38" text-anchor="middle" fill="#50fa7b" opacity="0.4">
-      Welcome to {Username}'s Github Profile
+      Welcome to Saviru's Github Profile
       <animate attributeName="x" values="400;399;403;398;400" dur="0.55s" begin="3.5s" repeatCount="indefinite" />
       <animate attributeName="y" values="100;101;99;102;100" dur="0.5s" begin="3.5s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="0.4;0.0;0.5;0.0;0.4" dur="0.35s" begin="3.5s" repeatCount="indefinite" />
@@ -239,7 +239,7 @@
     
     <!-- Main white text on top -->
     <text x="400" y="100" font-family="Impact, Haettenschweiler, Arial Narrow Bold, sans-serif" font-size="38" text-anchor="middle" fill="#ffffff">
-      Welcome to {Username}'s Github Profile
+      Welcome to Saviru's Github Profile
       <!-- Subtle animation for white text -->
       <animate attributeName="x" values="400;399;400;401;400" dur="0.8s" begin="3.5s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="1;0.95;1;0.98;1" dur="1.2s" begin="3.5s" repeatCount="indefinite" />
@@ -279,20 +279,20 @@
     
     <!-- Metal textured name -->
     <text x="400" y="85" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="middle" fill="url(#metalGradient)" opacity="0" filter="url(#blur)">
-      {Fullname}
+      Saviru Kashmira Atapattu
       <animate attributeName="opacity" values="0;1" dur="1.2s" begin="7.2s" fill="freeze" keySplines="0.25, 0.1, 0.25, 1" calcMode="spline" />
       <animate attributeName="y" values="95;85" dur="1.2s" begin="7.2s" fill="freeze" keySplines="0.34, 1.56, 0.64, 1" calcMode="spline" />
     </text>
     
     <!-- Shine effect overlay for name -->
     <text x="400" y="85" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="middle" fill="url(#shineGradient)" opacity="0">
-      {Fullname}
+      Saviru Kashmira Atapattu
       <animate attributeName="opacity" values="0;1" dur="1.2s" begin="7.2s" fill="freeze" />
     </text>
     
     <!-- Tagline with blue color -->
     <text x="400" y="130" font-family="Helvetica, Arial, sans-serif" font-size="18" text-anchor="middle" fill="#8be9fd" opacity="0">
-      {Tagline}
+      Developer | Tech Explorer | Designer
       <animate attributeName="opacity" values="0;1" dur="1.2s" begin="7.6s" fill="freeze" keySplines="0.25, 0.1, 0.25, 1" calcMode="spline" />
       <animate attributeName="y" values="140;130" dur="1.2s" begin="7.6s" fill="freeze" keySplines="0.34, 1.56, 0.64, 1" calcMode="spline" />
     </text>
@@ -320,4 +320,42 @@
       keySplines="0.25, 0.1, 0.25, 1"
       calcMode="spline" />
   </g>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 </svg>
