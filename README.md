@@ -1,6 +1,6 @@
 # GitBanner
 
-![Uptime Robot status](https://img.shields.io/uptimerobot/status/m801312572-98dcb615a332a46624adac18) ![Website](https://img.shields.io/website?url=https%3A%2F%2Fgitbanner.qzz.io)
+![Uptime Robot status](https://img.shields.io/uptimerobot/status/m801312572-98dcb615a332a46624adac18) ![Website](https://img.shields.io/website?url=https%3A%2F%2Fgitbanner.saviru.qzz.io)
 
 
 ![GitHub forks](https://img.shields.io/github/forks/Saviru/Animated-Profile-Banner-Generator) ![GitHub stars](https://img.shields.io/github/stars/Saviru/Animated-Profile-Banner-Generator)
@@ -10,7 +10,7 @@
 
 Create a unique animated GitHub profile banner with terminal-style loading, glitch effects, and metal textures.
 
-Go to [GitBanner Website](https://gitbanner.qzz.io) to generate your own banner! 
+Go to [GitBanner Website](https://gitbanner.saviru.qzz.io/) to generate your own banner! 
 
 Easy to use, just enter your GitHub username, full name and a description, and download the SVG file.
 
@@ -44,7 +44,7 @@ Easy to use, just enter your GitHub username, full name and a description, and d
 - Supports both mobile and desktop views
 
 ### 🚀 How to Use
-1. Go to the [GitBanner Website](https://gitbanner.qzz.io/)
+1. Go to the [GitBanner Website](https://gitbanner.saviru.qzz.io/)
 2. Enter your GitHub username, full name, and a short description
 3. Click "Generate Banner"
 4. Download the generated SVG file
