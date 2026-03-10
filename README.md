@@ -1,6 +1,6 @@
 # GitBanner
 
-![Uptime Robot status](https://img.shields.io/uptimerobot/status/m801324347-5b56436cd610ac8d4ccc1f32) ![Website](https://img.shields.io/website?url=https%3A%2F%2Fgitbanner.saviru.me)
+![Uptime Robot status](https://img.shields.io/uptimerobot/status/m802519145-0f818742d4f4e7846a52b424) ![Website](https://img.shields.io/website?url=https%3A%2F%2Fgitbanner.saviru.me)
 
 
 ![GitHub forks](https://img.shields.io/github/forks/Saviru/Animated-Profile-Banner-Generator) ![GitHub stars](https://img.shields.io/github/stars/Saviru/Animated-Profile-Banner-Generator)
