@@ -10,7 +10,7 @@
 
 Create a unique animated GitHub profile banner with terminal-style loading, glitch effects, and metal textures.
 
-Go to [GitBanner Website](https://gitbanner.saviru.qzz.io/) to generate your own banner! 
+Go to [GitBanner Website](https://saviru.github.io/GitBanner/) to generate your own banner! 
 
 Easy to use, just enter your GitHub username, full name and a description, and download the SVG file.
 
@@ -44,7 +44,7 @@ Easy to use, just enter your GitHub username, full name and a description, and d
 - Supports both mobile and desktop views
 
 ### 🚀 How to Use
-1. Go to the [GitBanner Website](https://gitbanner.saviru.qzz.io/)
+1. Go to the [GitBanner Website](https://saviru.github.io/GitBanner/)
 2. Enter your GitHub username, full name, and a short description
 3. Click "Generate Banner"
 4. Download the generated SVG file
@@ -54,13 +54,13 @@ Easy to use, just enter your GitHub username, full name and a description, and d
 - Some old browsers may not render SVG animations correctly.
 - There is only one banner style available currently.
 - Only supports dark mode.
-- You need to manually set width as 100% in markdown using `width=100%` using an ```img``` tag.
+- You need to manually set the width to 100% using an HTML `img` tag: `<img src="link-to-your-file.svg" width="100%">`
 
 *These issues will be addressed in future updates.
 
 ### 📄 License
 
-```Copyright (c) 2025 Saviru Kashmira Atapattu.```
+```Copyright (c) 2025-2026 Saviru Kashmira Atapattu.```
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
